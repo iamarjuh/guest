@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Guest WiFi Login</title>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <img src="tcs-gif-unscreen.gif" alt="Loading..." class="loading-gif">
+    </div>
+    <!-- Main Container -->
+    <div class="container" id="container">
+        
+        <!-- Register Form -->
+        <div class="form-container register">
+            <form id="registerForm">
+                <h1>Register</h1>
+                <span>Create your account</span>
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+                <button type="button" id="registerSendOtpBtn">Send OTP</button>
+                <button type="submit" class="hidden" id="registerSubmitBtn">Register</button>
+            </form>
+        </div>
+
+        <!-- Login Form -->
+        <div class="form-container login">
+            <form id="loginForm">
+                
+                <h1>Login</h1>
+                <span>Welcome back</span>
+                <input type="email" placeholder="Email" />
+                <button type="button" id="loginSendOtpBtn">Send OTP</button>
+                <button type="submit" class="hidden" id="loginSubmitBtn">Login</button>
+            </form>
+        </div>
+
+        <!-- Toggle Container -->
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <img src="image.png" alt="" srcset="" id="tcs-logo">
+                    <h1>Guest WiFi</h1>
+                    <p>Enter your email to login</p>
+                    <button class="hidden" id="login">Login</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <img src="image.png" alt="" srcset="" id="tcs-logo">
+                    <h1>Guest WiFi</h1>
+                    <p>Register with your email to use</p>
+                    <button class="hidden" id="register">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- OTP Popup -->
+    <div class="otp-popup" id="otpPopup">
+        <div class="otp-box">
+            <h2>Enter OTP</h2>
+            <input type="text" id="otpInput" placeholder="Enter OTP" maxlength="6">
+            <button type="button" id="submitOtpBtn">Submit OTP</button>
+            <p id="otpStatus"></p>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <h2>You are successfully connected to Guest WiFi!</h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
